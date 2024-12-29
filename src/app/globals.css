@@ -1,0 +1,460 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Header Container */
+.header {
+  height: 3.5rem; /* h-14 */
+  display: flex; /* flex */
+  justify-content: space-between; /* justify-between */
+  align-items: center; /* items-center */
+  padding: 0 5rem; /* px-20 */
+  font-family: monospace; /* font-mono */
+  font-weight: 600; /* font-semibold */
+  color: white; /* text-white */
+  background-color: #1e40af; /* bg-blue-800 */
+}
+
+/* Logo */
+.header-logo {
+  font-size: 2rem; /* text-4xl */
+}
+
+/* Navigation Bar */
+.nav {
+  display: none; /* hidden */
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex; /* md:flex */
+    gap: 2rem; /* space-x-8 */
+    font-size: 1.25rem; /* text-xl */
+  }
+}
+
+/* Navigation Links */
+.nav-link {
+  color: inherit; /* text-white */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-link:hover {
+  color: black; /* hover:text-black */
+}
+
+/* Contact Button */
+.contact-button {
+  padding: 0.5rem 1.5rem; /* px-6 py-2 */
+  background: linear-gradient(to bottom right, #1e3a8a, #2563eb); /* bg-gradient-to-br */
+  border: 1px solid black; /* border border-black */
+  border-radius: 9999px; /* rounded-full */
+  margin-right: 1rem; /* mr-4 */
+  font-weight: bold; /* font-bold */
+  color: white; /* text-white */
+  transition: all 0.3s ease; /* Smooth hover and transform effect */
+  transform: scale(1); /* Initial scale */
+}
+
+.contact-button:hover {
+  background-color: #2563eb; /* hover:bg-blue-700 */
+  transform: scale(1.05); /* hover:scale-105 */
+}
+
+/* Main Section */
+.main-section {
+  display: grid; /* Enables grid layout */
+  grid-template-columns: repeat(12, 1fr); /* Creates a 12-column grid */
+  gap: 1.5rem; /* Adds spacing between columns */
+  padding: 2rem; /* Adjust padding for smaller screens */
+  background: url('/image/minimal3.jpg') no-repeat center center; /* Background image */
+  background-size: cover; /* Ensures the image covers the section */
+  height: auto; /* Adjust height for smaller screens */
+  width: 100%; /* Full width */
+}
+
+@media (min-width: 768px) {
+  .main-section {
+    padding: 3rem; /* Medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-section {
+    padding: 5rem; /* Larger screens */
+    height: 100vh; /* Full screen height */
+  }
+}
+
+/* Left Content Area */
+.left-content {
+  grid-column: span 12; /* Spans full width on smaller screens */
+  display: flex; /* Ensures proper alignment */
+  flex-direction: column; /* Content is stacked vertically */
+  justify-content: center; /* Centers content vertically */
+  text-align: center; /* Centers text on smaller screens */
+  color: white; /* Text color */
+  padding: 1.5rem; /* Adjust padding for smaller screens */
+}
+
+@media (min-width: 768px) {
+  .left-content {
+    grid-column: span 7; /* Spans 7 columns on medium screens */
+    text-align: left; /* Aligns text to the left */
+    padding: 2rem; /* Medium padding */
+  }
+}
+
+.left-content h1 {
+  font-size: 2rem; /* Smaller font size for small screens */
+  font-weight: 800; /* Equivalent to font-extrabold */
+  margin-bottom: 1rem; /* Adds spacing */
+}
+
+@media (min-width: 768px) {
+  .left-content h1 {
+    font-size: 3rem; /* Larger font size for medium screens */
+  }
+}
+
+.left-content h1 span {
+  color: #1e3a8a; /* Text color (blue-950 in Tailwind) */
+}
+
+.left-content p {
+  font-size: 1rem; /* Smaller font size for small screens */
+  margin-bottom: 1.5rem; /* Adds spacing */
+}
+
+@media (min-width: 768px) {
+  .left-content p {
+    font-size: 1.25rem; /* Larger font size for medium screens */
+  }
+}
+
+/* Button Styling */
+.left-content button {
+  padding: 0.5rem 1rem; /* Smaller padding for small screens */
+  background: linear-gradient(to bottom right, #1e3a8a, #2563eb); /* Gradient background */
+  color: white;
+  border: 1px solid black;
+  border-radius: 9999px; /* Fully rounded */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.left-content button:hover {
+  background-color: #2563eb; /* Hover background */
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* Right Content Area */
+.right-content {
+  grid-column: span 12; /* Spans full width on smaller screens */
+  display: flex;
+  justify-content: center; /* Centers image horizontally */
+  align-items: center; /* Centers image vertically */
+  margin-top: 2rem; /* Adds spacing between sections for small screens */
+}
+
+@media (min-width: 768px) {
+  .right-content {
+    grid-column: span 5; /* Spans 5 columns on medium screens */
+    margin-top: 0; /* Removes extra spacing */
+  }
+}
+
+.right-content img {
+  border-radius: 9999px; /* Fully rounded */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Adds shadow */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effects */
+  max-width: 100%; /* Ensures image is responsive */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.right-content img:hover {
+  transform: scale(1.1); /* Slightly enlarges on hover */
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5); /* Adds deeper shadow */
+}
+
+
+/* contact  */
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Section Styles */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  background-image: url('/image/minimal3.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Left Section */
+.left-content {
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.left-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.left-content p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Form Styles */
+.form-container {
+  background-color: transparent;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-container textarea {
+  resize: none;
+  height: 150px;
+}
+
+.form-container button {
+  padding: 0.75rem 1.5rem;
+  width: auto;
+  background: linear-gradient(to bottom right, #1e3a8a, #2563eb);
+  border-radius: 9999px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container button:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.social-links h2 {
+
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1e3a8a;
+}
+
+.social-links div {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
+.social-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #60a5fa;
+}
+
+.social-links svg {
+  width: 40px;
+  height: 40px;
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .social-links div {
+    justify-content: center;
+  }
+}
+
+/* Services */
+
+.services-section {
+  color: white;
+  padding: 1rem;
+  background: url('/image/minimal3.jpg') center center / cover no-repeat;
+  width: 100%;
+}
+
+.services-heading {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0a2540;
+}
+
+.services-subheading {
+  text-align: left;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background-color: #192130;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  color: #eaee76;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service-description {
+  font-size: 1rem;
+}
+
+
+/* about.css */
+
+/* Section styling */
+.about-section {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  min-height: 90vh;
+  background-image: url('/image/minimal3.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: row;
+  }
+}
+
+/* Text content styling */
+.about-content {
+  text-align: center;
+  width: 100%;
+  padding: 2.5rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    text-align: left;
+    width: 50%;
+  }
+}
+
+.about-title {
+  font-size: 1.875rem; /* Tailwind equivalent to text-3xl */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 2.25rem; /* Tailwind equivalent to text-4xl */
+  }
+}
+
+.about-highlight {
+  color: #1e3a8a; /* Tailwind's text-blue-950 */
+}
+
+.about-text {
+  font-size: 1.125rem; /* Tailwind equivalent to text-lg */
+  margin: 0.5rem 0 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-text {
+    font-size: 1.25rem; /* Tailwind equivalent to text-xl */
+  }
+}
+
+/* Button styling */
+.contact-button {
+  font-size: 1.125rem;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  max-width: fit-content;
+  background: linear-gradient(to bottom right, #1e3a8a, #2563eb); /* Tailwind's blue-950 to blue-600 gradient */
+  border-radius: 9999px; /* Tailwind's rounded-full */
+  margin-right: 1rem;
+  color: white;
+  border: 1px solid black;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.contact-button:hover {
+  background-color: #1d4ed8; /* Tailwind's hover:bg-blue-700 */
+  transform: scale(1.05);
+}
